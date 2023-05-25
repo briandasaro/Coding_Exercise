@@ -1,0 +1,17 @@
+function getProductPriceAndCurrency() {
+  // Select the elements containing the price and currency from the DOM
+  const priceElement = document.querySelector('.styles__CurrentPriceFontSize-sc-1mdemp3-1');
+  
+  // Create an object with the extracted price and currency
+  const product = {
+    price: parseFloat(priceElement.textContent.trim().match(/\d+(\.\d+)?/)[0]),
+    currency: 'USD',
+  };
+
+  // Return the object
+  return product;
+}
+
+// Call the function directly in the console
+const productInfo = getProductPriceAndCurrency();
+console.log(productInfo);
