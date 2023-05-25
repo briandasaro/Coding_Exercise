@@ -1,0 +1,15 @@
+function assignClickHandlers() {
+  // Select the 'Sign Up Now' buttons on the page
+  const signUpButtons = document.querySelectorAll('a[href="/#signup"]');
+
+  // Iterate through each button and assign a click handler
+  signUpButtons.forEach((button, index) => {
+    button.addEventListener('click', function() {
+      // Display an alert indicating which button was clicked
+      alert(`Clicked button ${index + 1}`);
+    });
+  });
+}
+
+// Call the function to assign the click handlers
+assignClickHandlers();
